@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Volume of Sphere</title>
+
+```
+<style>
+    body {
+        font-family: Arial;
+        background-color: #e6f2ff;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .box {
+        background-color: white;
+        width: 350px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #999;
+    }
+
+    input {
+        width: 200px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px 25px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: darkblue;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="box">
+
+    <h2>Volume of Sphere</h2>
+
+    <p>Enter Radius:</p>
+
+    <input type="number" id="radius" placeholder="Enter radius">
+
+    <br>
+
+    <button onclick="calculateVolume()">Calculate</button>
+
+    <p>Volume:</p>
+
+    <input type="text" id="result" placeholder="Result" readonly>
+
+</div>
+
+
+<script>
+
+    function calculateVolume() {
+
+        var radius = document.getElementById("radius").value;
+
+        if (radius == "") {
+            alert("Please enter radius");
+            return;
+        }
+
+        var volume = (4 / 3) * Math.PI * radius * radius * radius;
+
+        document.getElementById("result").value = volume.toFixed(2);
+    }
+
+</script>
+```
+
+</body>
+</html>
+
